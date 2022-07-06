@@ -40,4 +40,8 @@ public class StudentService {
         this.studentRepository.deleteById(id);
         return "Details has been deleted";
     }
+
+    public List<Student> findAllByCity(String city){
+        return studentRepository.getByCity(city);
+    }
 }

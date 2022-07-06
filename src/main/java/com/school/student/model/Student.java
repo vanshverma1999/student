@@ -10,11 +10,21 @@ public class Student {
 
     private String name;
     private int age;
+    private String city;
 
-    public Student(String id, String name, int age) {
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Student(String id, String name, int age, String city) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.city = city;
     }
 
     public Student() {
