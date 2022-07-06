@@ -30,4 +30,11 @@ public class StudentController {
         return this.studentService.deleteStudent(id);
     }
 
+    @PutMapping("/updateStudent")
+    public String updateStudent(@RequestBody Student student){return this.studentService.updateStudent(student);}
+
+    @GetMapping("/student/{city}")
+    public ResponseEntity findStudentsByCity(@PathVariable("city") String city){
+        return ResponseEntity.ok(studentService.findAllByCity(city));
+    }
 }
